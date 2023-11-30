@@ -20,6 +20,8 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Devices
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.wear.compose.foundation.CurvedLayout
+import androidx.wear.compose.foundation.basicCurvedText
 import androidx.wear.compose.material.MaterialTheme
 import androidx.wear.compose.material.Text
 import com.serratocreations.bluetoothdemoserver.R

@@ -60,10 +60,12 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        permissionsHelper.requestPermissionsIfRequired(
-            permissions = arrayOf(Manifest.permission.BLUETOOTH_CONNECT),
-            requestCode = BLE_PERMISSIONS_REQUEST_CODE
-        )
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
+            permissionsHelper.requestPermissionsIfRequired(
+                permissions = arrayOf(Manifest.permission.BLUETOOTH_CONNECT, Manifest.permission.BLUETOOTH_SCAN),
+                requestCode = BLE_PERMISSIONS_REQUEST_CODE
+            )
+        }
         setContent {
             BluetoothDemoTheme {
                 // A surface container using the 'background' color from the theme
